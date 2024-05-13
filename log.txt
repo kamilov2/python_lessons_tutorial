@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "c:\Users\Gnom\Desktop\python\lesson_19.py", line 24, in <module>
+    long_time(int(input("1 sonni kiriting: ")), int(input("Matematik amalni kiriting: ")) , int(input("2 son ni kiriting: ")))
+                                                                                            ^^^^^^^^afwfgsrggsgsfgsrgsgsgsfgfsgfsdgsfg^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''fbfdbfdbsg
+sb
+fsdfnmfdbjnsffhkjon
