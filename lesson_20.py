@@ -49,3 +49,6 @@ print(pubg_id_name(int(input("Pubg ID sini kiriting va men uni username ni qayta
 num1 =  [1,2,3,4,5]
 num2 = [5,6,7,8,4]
 new_list = [5,4]
+
+
+

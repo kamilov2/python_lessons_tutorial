@@ -25,29 +25,32 @@
 # choose_your("r")
 
 
-def zyrex(uzb):
-    if uzb == "w":
-        file = open("example.txt", "w")
-        file.write(input(f"Siz faylga ma'umot yozishni tanladingiz \nFaylga istalgan yoziladigan narsa yozing: "))
-        file.close()
-        return f"Faylga malumotlar yozildi!"
-    elif uzb == "a":
-        file = open("example.txt", "a")
-        file.write(input(f"Siz faylga ma'umot qo'shishni tanladingiz \nFaylga istalgan yoziladigan narsa yozing: "))
-        file.close()
-        return f"Faylga malumotlar qo'shildi!"
-    elif uzb == "r":
-        file = open("example.txt", "r")
-        file_content = file.read() 
-        file.close()
-        return f"Fayldagi narsalar: \n{file_content}"
-    else:
-        return "Siz kiritgan harf ma'lumotlar orasida yo'q !!!"
+# def zyrex(uzb):
+#     if uzb == "w":
+#         file = open("example.txt", "w")
+#         file.write(input(f"Siz faylga ma'umot yozishni tanladingiz \nFaylga istalgan yoziladigan narsa yozing: "))
+#         file.close()
+#         return f"Faylga malumotlar yozildi!"
+#     elif uzb == "a":
+#         file = open("example.txt", "a")
+#         file.write(input(f"Siz faylga ma'umot qo'shishni tanladingiz \nFaylga istalgan yoziladigan narsa yozing: "))
+#         file.close()
+#         return f"Faylga malumotlar qo'shildi!"
+#     elif uzb == "r":
+#         file = open("example.txt", "r")
+#         file_content = file.read() 
+#         file.close()
+#         return f"Fayldagi narsalar: \n{file_content}"
+#     else:
+#         return "Siz kiritgan harf ma'lumotlar orasida yo'q !!!"
     
-print(zyrex(str(input('''
-Harflardan birini tanlang:
+# print(zyrex(str(input('''
+# Harflardan birini tanlang:
 
-w - Faylga ma'lumot yozish
-a - Faylga ma'lumot qo'shish
-r - Fayldagi ma'lumotni o'qish
-''').lower())))
+# w - Faylga ma'lumot yozish
+# a - Faylga ma'lumot qo'shish
+# r - Fayldagi ma'lumotni o'qish
+# ''').lower())))
+
+
+
