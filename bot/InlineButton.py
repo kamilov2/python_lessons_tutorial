@@ -15,4 +15,5 @@ def callback_query(call):
     if call.data == 'btn1':
         bot.send_message(call.message.chat.id, "va alaykum assalom")
 
+
 bot.polling()

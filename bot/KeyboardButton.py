@@ -25,5 +25,27 @@ def handle_special_content(message):# funksiya doimiy decoratordan malum uyruk k
         bot.send_message(message.chat.id, f"Received location: {message.location.latitude}, {message.location.longitude}") # funksiya tugashi malum bir javob bilan 'message.location.latitude' - kordinat olish hisoblanib yer shari boyiga qarab beriladi, 'message.location.longitude' - kordinat olish hisoblanib yer shari eniga qarab beriladi \
             
 
+
+@bot.message_handler(commands=['hello'])
+def start(message):
+    markup = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
+    button1 = types.KeyboardButton("Button 1")
+    button2 = types.KeyboardButton("Button 2")
+    markup.add(button1, button2)
+    bot.send_message(message.chat.id, "Choose an option:", reply_markup=markup)
+
+@bot.message_handler(func=lambda message: True)
+def handle_message(message):
+    if message.text == "Button 1":
+        markup = types.InlineKeyboardMarkup(row_width=2)
+        markup.add(types.InlineKeyboardButton("salom", url="https://kun.uz"), types.InlineKeyboardButton("salom", url="https://kun.uz"))
+        bot.send_message(6781413070, "You pressed Button 1!")
+    elif message.text == "Button 2":
+        bot.send_message(message.chat.id, "You pressed Button 2!")
+    elif message.text == "Assalomu alaykum":
+        bot.send_message(message.chat.id, "Va alaykum assalom")
+
 bot.polling()# bot polling doimiy boglanishlikni hosil qilib beradi bot. bu ozgaruvchidan chaqiradi
+
+
 
