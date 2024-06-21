@@ -3,7 +3,7 @@ from telebot import TeleBot, types #kutubxonalarni import qilish 'TeleBot' - doi
 
 bot = TeleBot('7293075143:AAHcGWvUmnmK4lo4qxtXcmX6KmfvOTTlWtg') # - doimiy ulanishlikni hosil qilish
 
-@bot.message_handler(commands=['start','salom','register'])# decorator doimiy kuzatuvchi metod doimiy korsatilgan commandani kuzatadi
+@bot.message_handler(commands=['start'])# decorator doimiy kuzatuvchi metod doimiy korsatilgan commandani kuzatadi
 def register(message):# register funksiyasi qaconki decorator orqali buyruq kelsa shundagina ishledi 
     markup = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)# KeyboardButton larni razmerga solish qurilmaga qarab
     
@@ -15,7 +15,7 @@ def register(message):# register funksiyasi qaconki decorator orqali buyruq kels
     
     bot.send_message(message.chat.id, "Choose an option:", reply_markup=markup)# funksiyani tugashi doim bir response bilan tugashi shart malum buyruk kelgandan kegin majbur javob qaytarish kerak
 
-@bot.message_handler(content_types=['contact', 'location'])# decoerator malum bir buyruklarni kuzatish 'content_types' doimiy - 'location','contact','media','rasm' va 'matn' shaklidagi buyruklarni korsatish uchun kerak boladi va odimiy 'list' malumot turini qabul qiladi  
+@bot.message_handler(content_types=['contact', 'location'])# decorator malum bir buyruklarni kuzatish 'content_types' doimiy - 'location','contact','media','rasm' va 'matn' shaklidagi buyruklarni korsatish uchun kerak boladi va odimiy 'list' malumot turini qabul qiladi  
 def handle_special_content(message):# funksiya doimiy decoratordan malum uyruk kelganda ishledi va message ni qabul qiladi message oz ichiga hamma chatdegi yozuvlarni oziga oladi
     if message.contact:# malumot tekshirish message.contact message ozida contact degan malumot ni qabul qilib tekshirish True yoqi False qiymatini qaytaradi
         
